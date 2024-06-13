@@ -464,14 +464,14 @@ create_winMain (void)
   gtk_widget_show (filePrint);
   gtk_container_add (GTK_CONTAINER (menuFile_menu), filePrint);
   gtk_widget_add_accelerator (filePrint, "activate", accel_group,
-                              GDK_P, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_P, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   filePrintPDF = gtk_menu_item_new_with_mnemonic (_("_Export to PDF"));
   gtk_widget_show (filePrintPDF);
   gtk_container_add (GTK_CONTAINER (menuFile_menu), filePrintPDF);
   gtk_widget_add_accelerator (filePrintPDF, "activate", accel_group,
-                              GDK_E, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_E, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   separator2 = gtk_separator_menu_item_new ();
@@ -494,14 +494,14 @@ create_winMain (void)
   gtk_widget_show (editUndo);
   gtk_container_add (GTK_CONTAINER (menuEdit_menu), editUndo);
   gtk_widget_add_accelerator (editUndo, "activate", accel_group,
-                              GDK_Z, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_Z, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   editRedo = gtk_image_menu_item_new_from_stock ("gtk-redo", accel_group);
   gtk_widget_show (editRedo);
   gtk_container_add (GTK_CONTAINER (menuEdit_menu), editRedo);
   gtk_widget_add_accelerator (editRedo, "activate", accel_group,
-                              GDK_Y, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_Z, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
 
   separator3 = gtk_separator_menu_item_new ();
@@ -581,28 +581,28 @@ create_winMain (void)
   gtk_widget_show (viewZoomIn);
   gtk_container_add (GTK_CONTAINER (menuViewZoom_menu), viewZoomIn);
   gtk_widget_add_accelerator (viewZoomIn, "activate", accel_group,
-                              GDK_plus, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_plus, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   viewZoomOut = gtk_image_menu_item_new_from_stock ("gtk-zoom-out", accel_group);
   gtk_widget_show (viewZoomOut);
   gtk_container_add (GTK_CONTAINER (menuViewZoom_menu), viewZoomOut);
   gtk_widget_add_accelerator (viewZoomOut, "activate", accel_group,
-                              GDK_minus, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_minus, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   viewNormalSize = gtk_image_menu_item_new_from_stock ("gtk-zoom-100", accel_group);
   gtk_widget_show (viewNormalSize);
   gtk_container_add (GTK_CONTAINER (menuViewZoom_menu), viewNormalSize);
   gtk_widget_add_accelerator (viewNormalSize, "activate", accel_group,
-                              GDK_0, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_0, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   viewPageWidth = gtk_image_menu_item_new_with_mnemonic (_("Page _Width"));
   gtk_widget_show (viewPageWidth);
   gtk_container_add (GTK_CONTAINER (menuViewZoom_menu), viewPageWidth);
   gtk_widget_add_accelerator (viewPageWidth, "activate", accel_group,
-                              GDK_equal, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_equal, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image625 = gtk_image_new_from_stock ("gtk-zoom-fit", GTK_ICON_SIZE_MENU);
@@ -622,7 +622,7 @@ create_winMain (void)
   gtk_widget_show (viewFirstPage);
   gtk_container_add (GTK_CONTAINER (menuView_menu), viewFirstPage);
   gtk_widget_add_accelerator (viewFirstPage, "activate", accel_group,
-                              GDK_Home, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_Home, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image626 = gtk_image_new_from_stock ("gtk-goto-first", GTK_ICON_SIZE_MENU);
@@ -633,7 +633,7 @@ create_winMain (void)
   gtk_widget_show (viewPreviousPage);
   gtk_container_add (GTK_CONTAINER (menuView_menu), viewPreviousPage);
   gtk_widget_add_accelerator (viewPreviousPage, "activate", accel_group,
-                              GDK_Left, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_Left, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image627 = gtk_image_new_from_stock ("gtk-go-back", GTK_ICON_SIZE_MENU);
@@ -644,7 +644,7 @@ create_winMain (void)
   gtk_widget_show (viewNextPage);
   gtk_container_add (GTK_CONTAINER (menuView_menu), viewNextPage);
   gtk_widget_add_accelerator (viewNextPage, "activate", accel_group,
-                              GDK_Right, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_Right, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image628 = gtk_image_new_from_stock ("gtk-go-forward", GTK_ICON_SIZE_MENU);
@@ -655,7 +655,7 @@ create_winMain (void)
   gtk_widget_show (viewLastPage);
   gtk_container_add (GTK_CONTAINER (menuView_menu), viewLastPage);
   gtk_widget_add_accelerator (viewLastPage, "activate", accel_group,
-                              GDK_End, (GdkModifierType) GDK_CONTROL_MASK,
+                              GDK_End, (GdkModifierType) GDK_META_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image629 = gtk_image_new_from_stock ("gtk-goto-last", GTK_ICON_SIZE_MENU);
@@ -870,7 +870,7 @@ create_winMain (void)
   gtk_widget_show (toolsPen);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsPen);
   gtk_widget_add_accelerator (toolsPen, "activate", accel_group,
-                              GDK_P, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_P, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsPen), TRUE);
 
@@ -879,7 +879,7 @@ create_winMain (void)
   gtk_widget_show (toolsEraser);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsEraser);
   gtk_widget_add_accelerator (toolsEraser, "activate", accel_group,
-                              GDK_E, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_E, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsEraser), TRUE);
 
@@ -888,7 +888,7 @@ create_winMain (void)
   gtk_widget_show (toolsHighlighter);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsHighlighter);
   gtk_widget_add_accelerator (toolsHighlighter, "activate", accel_group,
-                              GDK_H, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_H, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsHighlighter), TRUE);
 
@@ -897,7 +897,7 @@ create_winMain (void)
   gtk_widget_show (toolsText);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsText);
   gtk_widget_add_accelerator (toolsText, "activate", accel_group,
-                              GDK_T, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_T, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsText), TRUE);
 
@@ -906,7 +906,7 @@ create_winMain (void)
   gtk_widget_show (toolsImage);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsImage);
   gtk_widget_add_accelerator (toolsImage, "activate", accel_group,
-                              GDK_I, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_I, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsImage), TRUE);
 
@@ -919,14 +919,14 @@ create_winMain (void)
   gtk_widget_show (toolsReco);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsReco);
   gtk_widget_add_accelerator (toolsReco, "activate", accel_group,
-                              GDK_S, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_S, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
 
   toolsRuler = gtk_check_menu_item_new_with_mnemonic (_("Ru_ler"));
   gtk_widget_show (toolsRuler);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsRuler);
   gtk_widget_add_accelerator (toolsRuler, "activate", accel_group,
-                              GDK_L, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_L, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
 
   separator9 = gtk_separator_menu_item_new ();
@@ -939,7 +939,7 @@ create_winMain (void)
   gtk_widget_show (toolsSelectRegion);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsSelectRegion);
   gtk_widget_add_accelerator (toolsSelectRegion, "activate", accel_group,
-                              GDK_G, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_G, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsSelectRegion), TRUE);
 
@@ -948,7 +948,7 @@ create_winMain (void)
   gtk_widget_show (toolsSelectRectangle);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsSelectRectangle);
   gtk_widget_add_accelerator (toolsSelectRectangle, "activate", accel_group,
-                              GDK_R, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_R, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsSelectRectangle), TRUE);
 
@@ -957,7 +957,7 @@ create_winMain (void)
   gtk_widget_show (toolsVerticalSpace);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsVerticalSpace);
   gtk_widget_add_accelerator (toolsVerticalSpace, "activate", accel_group,
-                              GDK_V, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_V, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
   gtk_check_menu_item_set_active (GTK_CHECK_MENU_ITEM (toolsVerticalSpace), TRUE);
 
@@ -966,7 +966,7 @@ create_winMain (void)
   gtk_widget_show (toolsHand);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsHand);
   gtk_widget_add_accelerator (toolsHand, "activate", accel_group,
-                              GDK_A, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_A, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
 
   separator16 = gtk_separator_menu_item_new ();
@@ -1179,7 +1179,7 @@ create_winMain (void)
   gtk_widget_show (toolsTextFont);
   gtk_container_add (GTK_CONTAINER (menuTools_menu), toolsTextFont);
   gtk_widget_add_accelerator (toolsTextFont, "activate", accel_group,
-                              GDK_F, (GdkModifierType) GDK_CONTROL_MASK | GDK_SHIFT_MASK,
+                              GDK_F, (GdkModifierType) GDK_META_MASK | GDK_SHIFT_MASK,
                               GTK_ACCEL_VISIBLE);
 
   image634 = gtk_image_new_from_stock ("gtk-select-font", GTK_ICON_SIZE_MENU);
