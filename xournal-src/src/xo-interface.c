@@ -525,7 +525,7 @@ create_winMain (void)
   gtk_widget_show (editDelete);
   gtk_container_add (GTK_CONTAINER (menuEdit_menu), editDelete);
   gtk_widget_add_accelerator (editDelete, "activate", accel_group,
-                              GDK_Delete, (GdkModifierType) 0,
+                              GDK_BackSpace, (GdkModifierType) 0,
                               GTK_ACCEL_VISIBLE);
 
   menuView = gtk_menu_item_new_with_mnemonic (_("_View"));
